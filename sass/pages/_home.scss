@@ -1,0 +1,40 @@
+.container {
+  width: 123rem;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: $color-primary;
+  padding: 2.4rem;
+}
+
+.hero {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 8rem 0;
+
+  &__content {
+    padding: 2.5rem 0;
+  }
+
+  &__heading {
+    font-size: 6rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    span {
+      color: $color-yellow;
+    }
+  }
+
+  &__text {
+    font-size: 1.9rem;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+
+  &__vid {
+    video {
+      width: 127%;
+    }
+  }
+}

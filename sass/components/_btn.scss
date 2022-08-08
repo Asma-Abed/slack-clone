@@ -1,0 +1,53 @@
+.btn {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2rem 4rem;
+  border-radius: 4px;
+  &--primary:link,
+  &--primary:visited {
+    color: $color-primary-light;
+    background-color: $color-white;
+    box-shadow: inset 0 0 0 1px $color-primary-light;
+    transition: all 0.3s;
+  }
+
+  &--primary:hover {
+    box-shadow: inset 0 0 0 2px $color-primary-light;
+  }
+  &--primary:active,
+  &--primary:focus {
+    background-color: $color-primary-light;
+    color: $color-white;
+    box-shadow: inset 0 0 0 2px $color-primary-light;
+  }
+  &--google {
+    position: relative;
+    padding-left: 6rem;
+    padding-right: 2rem;
+    img {
+      width: 2.3rem;
+      height: 2.3rem;
+      position: absolute;
+      background-color: $color-white;
+      padding: 1.3rem;
+      top: 0.4rem;
+      left: 0.4rem;
+    }
+  }
+  &--google:link,
+  &--google:visited {
+    color: $color-white;
+    background-color: $color-blue;
+    transition: all 0.3s;
+  }
+
+  &--google:active,
+  &--google:focus {
+    color: $color-blue;
+    background-color: $color-white;
+    box-shadow: inset 0 0 0 2px $color-blue;
+  }
+}

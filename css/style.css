@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+.margbtm-hero-big {
+  margin-bottom: 5.6rem;
+}
+
+.margbtm-hero-smll {
+  margin-top: 1.6rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 2rem 4rem;
+  border-radius: 4px;
+}
+.btn--primary:link, .btn--primary:visited {
+  color: #611f69;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #611f69;
+  transition: all 0.3s;
+}
+.btn--primary:hover {
+  box-shadow: inset 0 0 0 2px #611f69;
+}
+.btn--primary:active, .btn--primary:focus {
+  background-color: #611f69;
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #611f69;
+}
+.btn--google {
+  position: relative;
+  padding-left: 6rem;
+  padding-right: 2rem;
+}
+.btn--google img {
+  width: 2.3rem;
+  height: 2.3rem;
+  position: absolute;
+  background-color: #fff;
+  padding: 1.3rem;
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.btn--google:link, .btn--google:visited {
+  color: #fff;
+  background-color: #4285f4;
+  transition: all 0.3s;
+}
+.btn--google:active, .btn--google:focus {
+  color: #4285f4;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 2px #4285f4;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 53% 45%;
+  column-gap: 2%;
+}
+
+.container {
+  width: 123rem;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #541554;
+  padding: 2.4rem;
+}
+
+.hero {
+  background-color: #541554;
+  color: #fff;
+  padding: 8rem 0;
+}
+.hero__content {
+  padding: 2.5rem 0;
+}
+.hero__heading {
+  font-size: 6rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.hero__heading span {
+  color: #ecb22e;
+}
+.hero__text {
+  font-size: 1.9rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.hero__vid video {
+  width: 127%;
+}
+
+/*# sourceMappingURL=style.css.map */
