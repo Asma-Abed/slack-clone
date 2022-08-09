@@ -15,12 +15,27 @@ body {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
 }
 
+.heading-secondary {
+  font-size: 4.8rem;
+  letter-spacing: -0.8px;
+  color: #000;
+  margin-bottom: 1.6rem;
+}
+
 .margbtm-hero-big {
   margin-bottom: 5.6rem;
 }
 
 .margbtm-hero-smll {
   margin-top: 1.6rem;
+}
+
+.padding-left {
+  padding-left: 7.2rem !important;
+}
+
+.padding-right {
+  padding-right: 7.2rem !important;
 }
 
 .btn {
@@ -71,14 +86,57 @@ body {
   box-shadow: inset 0 0 0 2px #4285f4;
 }
 
-.grid-2-col {
+.feature-box {
+  padding: 3rem 0;
+  font-weight: 500;
+}
+.feature-box__text {
+  font-size: 1.8rem;
+  color: #000;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+.feature-box__link:link, .feature-box__link:visited {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #1264a3;
+  text-decoration: none;
+  position: relative;
+}
+.feature-box__link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  color: #1264a3;
+  background-color: #1264a3;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+.feature-box__link:hover::after {
+  color: #000;
+  transform: scaleX(1);
+}
+
+.grid-hero {
   display: grid;
   grid-template-columns: 53% 45%;
-  column-gap: 2%;
+  gap: 2%;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(56rem, 45%));
+  gap: 10rem;
+  align-items: center;
 }
 
 .container {
-  width: 123rem;
+  max-width: 123rem;
   margin: 0 auto;
 }
 
@@ -110,6 +168,39 @@ body {
 }
 .hero__vid video {
   width: 127%;
+}
+
+.featured {
+  background-color: #f4ede4;
+  padding: 4.8rem;
+}
+.featured__title {
+  font-size: 1.4rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+.featured__logos {
+  display: flex;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 16rem;
+}
+.featured__logo {
+  width: 100%;
+  height: auto;
+}
+
+.features {
+  background-color: #f4ede4;
+  padding: 2.4rem 0 4.8rem 0;
+}
+.features__vid video {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

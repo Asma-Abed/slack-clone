@@ -1,5 +1,12 @@
-.grid-2-col {
+.grid-hero {
   display: grid;
   grid-template-columns: 53% 45%;
-  column-gap: 2%;
+  gap: 2%;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(56rem, 45%));
+  gap: 10rem;
+  align-items: center;
 }
