@@ -1,11 +1,16 @@
 .btn {
   display: inline-block;
   font-size: 1.4rem;
+  letter-spacing: 0.8px;
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   padding: 2rem 4rem;
   border-radius: 4px;
+  &:focus {
+    outline: $color-primary-light dotted 2px;
+    outline-offset: 5px;
+  }
   &--primary:link,
   &--primary:visited {
     color: $color-primary-light;
@@ -49,5 +54,29 @@
     color: $color-blue;
     background-color: $color-white;
     box-shadow: inset 0 0 0 2px $color-blue;
+  }
+
+  &--violet:link,
+  &--violet:visited {
+    background-color: $color-primary-light;
+    color: $color-white;
+    transition: all 0.3s;
+  }
+  &--violet:hover,
+  &--violet:active {
+    background-color: $color-primary-dark;
+  }
+  &--border-violet:link,
+  &--border-violet:visited {
+    box-shadow: inset 0 0 0 1px $color-primary-light;
+    transition: all 0.3s;
+  }
+  &--border-violet:hover {
+    box-shadow: inset 0 0 0 2px $color-primary-light;
+  }
+  &--border-violet:active {
+    background-color: $color-primary-light;
+    color: $color-white;
+    box-shadow: inset 0 0 0 2px $color-primary-light;
   }
 }

@@ -5,34 +5,8 @@
   &__text {
     font-size: 1.8rem;
     color: $color-black;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.5;
     margin-bottom: 1.6rem;
-  }
-
-  &__link:link,
-  &__link:visited {
-    display: inline-block;
-    font-size: 1.8rem;
-    color: $color-blue-dark;
-    text-decoration: none;
-    position: relative;
-  }
-  &__link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    color: $color-blue-dark;
-    background-color: $color-blue-dark;
-    transform-origin: bottom left;
-    transition: transform 0.3s ease-out;
-  }
-  &__link:hover::after {
-    color: #000;
-    transform: scaleX(1);
   }
 }

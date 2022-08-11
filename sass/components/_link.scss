@@ -1,0 +1,27 @@
+.link-btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: $color-blue-dark;
+    text-decoration: none;
+    position: relative;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    color: $color-blue-dark;
+    background-color: $color-blue-dark;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+  }
+  &:hover::after {
+    color: #000;
+    transform: scaleX(1);
+  }
+}

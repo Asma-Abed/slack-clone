@@ -32,6 +32,11 @@
     font-weight: 500;
   }
 
+  &__btns {
+    display: flex;
+    gap: 0.8rem;
+  }
+
   &__vid {
     video {
       width: 127%;
@@ -74,5 +79,62 @@
     video {
       width: 100%;
     }
+  }
+}
+
+.statistics {
+  padding: 9.8rem 0 4.8rem 0;
+  &__heading {
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: $color-black;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 3.2rem;
+  }
+
+  &__btns {
+    margin-bottom: 7rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  &__numbers {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  &__box {
+    max-width: 18rem;
+  }
+
+  &__num {
+    font-size: 6rem;
+    color: $color-primary-light;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+}
+
+.testimonial {
+  max-width: 153rem;
+  margin: 0 auto;
+  padding: 8rem 0 1.6rem 0;
+
+  &__note {
+    font-size: 1.4rem;
+    margin-top: 6.2rem;
+    text-align: center;
   }
 }
