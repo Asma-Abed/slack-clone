@@ -38,6 +38,60 @@ body {
   padding-right: 7.2rem !important;
 }
 
+.about-box {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000;
+  padding: 1.3rem;
+  background-color: #fff;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.about-box:hover {
+  transform: scale(1.05);
+}
+.about-box--head {
+  background-color: #4a154b;
+  color: #fff;
+}
+.about-box__img-box {
+  margin-bottom: 2rem;
+}
+.about-box__subheading {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+.about-box__subheading--head {
+  margin-top: 1.6rem;
+}
+.about-box__heading {
+  font-size: 2.2rem;
+  margin-bottom: 6rem;
+}
+.about-box__cta {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about-box__cta-text {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #1264a3;
+  font-weight: 700;
+}
+.about-box__cta-text--head {
+  color: #fff;
+}
+.about-box__cta-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #1264a3;
+}
+.about-box__cta-icon--head {
+  fill: #fff;
+}
+
 .btn {
   display: inline-block;
   font-size: 1.4rem;
@@ -195,6 +249,12 @@ body {
   align-items: center;
 }
 
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
 .container {
   max-width: 123rem;
   margin: 0 auto;
@@ -317,6 +377,16 @@ body {
   font-size: 1.4rem;
   margin-top: 6.2rem;
   text-align: center;
+}
+
+.about {
+  background-color: #f4ede4;
+  padding: 6rem 0 8rem 0;
+}
+.about__heading {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
