@@ -149,3 +149,21 @@
     margin-bottom: 3.2rem;
   }
 }
+
+.cta {
+  padding: 11rem 0;
+  text-align: center;
+  background-color: $color-primary-dark;
+  clip-path: ellipse(75% 100% at center top);
+
+  &__heading {
+    color: $color-white;
+  }
+
+  &__btns {
+    margin-top: 3.8rem;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+}
