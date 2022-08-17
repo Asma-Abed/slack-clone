@@ -18,7 +18,46 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav">NAVIGATION</nav>
+      <div class="container header__container">
+        <div class="header__logo-nav">
+          <div class="header__logo-box">
+            <img src="img/logo.png" alt="Slack logo" class="header__logo" />
+          </div>
+          <nav class="nav">
+            <ul class="nav__nav-bar">
+              <li>
+                <a href="#" class="nav__link">Product</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link">Solutions</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link">Entreprise</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link">Resources</a>
+              </li>
+              <li>
+                <a href="#" class="nav__link">Pricing</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="nav__btns">
+          <div class="nav__search-btn">
+            <svg class="nav__search-icon">
+              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </div>
+          <a href="#" class="nav__link">Sign in</a>
+          <div class="nav__cta-btns">
+            <a href="#" class="btn btn--border-white btn--small"
+              >Talk to sales</a
+            >
+            <a href="#" class="btn btn--primary btn--small">Try for free</a>
+          </div>
+        </div>
+      </div>
     </header>
     <main>
       <section class="hero">
