@@ -1,3 +1,11 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 *,
 *::after,
 *::before {
@@ -152,18 +160,6 @@ body {
 .btn--violet:hover, .btn--violet:active {
   background-color: #4a154b;
 }
-.btn--border-violet:link, .btn--border-violet:visited {
-  box-shadow: inset 0 0 0 1px #611f69;
-  transition: all 0.3s;
-}
-.btn--border-violet:hover {
-  box-shadow: inset 0 0 0 2px #611f69;
-}
-.btn--border-violet:active {
-  background-color: #611f69;
-  color: #fff;
-  box-shadow: inset 0 0 0 2px #611f69;
-}
 .btn--border-white:link, .btn--border-white:visited {
   box-shadow: inset 0 0 0 1px #fff;
   color: #fff;
@@ -176,6 +172,19 @@ body {
   background-color: #fff;
   color: #611f69;
   box-shadow: inset 0 0 0 2px #fff;
+}
+.btn--border-violet:link, .btn--border-violet:visited {
+  box-shadow: inset 0 0 0 1px #611f69;
+  transition: all 0.3s;
+  color: #611f69;
+}
+.btn--border-violet:hover {
+  box-shadow: inset 0 0 0 2px #611f69;
+}
+.btn--border-violet:active {
+  background-color: #611f69;
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #611f69;
 }
 .btn--small {
   padding: 1.4rem 1.4rem;
@@ -404,12 +413,14 @@ body {
 .header {
   background-color: #541554;
   padding: 2rem 0;
+  display: flex;
+  justify-content: center;
 }
 .header__container {
   display: flex;
-  gap: 3rem;
   align-items: center;
   justify-content: space-between;
+  gap: 10vw;
 }
 .header__logo-nav {
   display: flex;
@@ -418,9 +429,27 @@ body {
 .header__logo {
   height: 2.5rem;
   width: auto;
+  display: inline-block;
+}
+.header__logo-hidden {
+  display: none;
+}
+.header__logo-sticky {
+  height: 4.8rem;
+  width: auto;
 }
 
-.nav {
+.nav__sticky {
+  position: fixed;
+  background-color: #fff;
+  padding: 1.8rem 3.6rem;
+  border-radius: 50px;
+  box-shadow: 0 0.4rem 4rem rgba(0, 0, 0, 0.08);
+  z-index: 1000;
+  top: 1rem;
+  animation: slideDown 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.nav__links {
   display: flex;
   align-items: center;
 }
@@ -441,11 +470,21 @@ body {
 .nav__link:hover, .nav__link:active {
   border-bottom: 1px solid #fff;
 }
+.nav__link--black:link, .nav__link--black:visited {
+  color: #000;
+}
+.nav__link--black:hover, .nav__link--black:active {
+  border-bottom: 1px solid #000;
+}
 .nav__search-icon {
+  cursor: pointer;
   width: 2.4rem;
   height: 2.4rem;
   fill: #fff;
   transform: translateY(0.2rem);
+}
+.nav__search-icon--black {
+  fill: #000;
 }
 .nav__btns {
   display: flex;

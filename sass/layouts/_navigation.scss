@@ -1,6 +1,19 @@
 .nav {
-  display: flex;
-  align-items: center;
+  &__sticky {
+    position: fixed;
+    background-color: $color-white;
+    padding: 1.8rem 3.6rem;
+    border-radius: 50px;
+    box-shadow: 0 0.4rem 4rem rgba($color-black, 0.08);
+    z-index: 1000;
+    top: 1rem;
+    animation: slideDown 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
   &__nav-bar {
     list-style: none;
     display: flex;
@@ -22,11 +35,25 @@
     border-bottom: 1px solid $color-white;
   }
 
+  &__link--black:link,
+  &__link--black:visited {
+    color: $color-black;
+  }
+
+  &__link--black:hover,
+  &__link--black:active {
+    border-bottom: 1px solid $color-black;
+  }
+
   &__search-icon {
+    cursor: pointer;
     width: 2.4rem;
     height: 2.4rem;
     fill: $color-white;
     transform: translateY(0.2rem);
+    &--black {
+      fill: $color-black;
+    }
   }
 
   &__btns {
