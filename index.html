@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="header">
-      <nav id="nav" class="container">
+      <nav id="nav" class="nav container">
         <div class="header__container">
           <div class="header__logo-nav">
             <div class="header__logo-box">
@@ -32,8 +32,54 @@
             </div>
             <nav class="nav__links">
               <ul class="nav__nav-bar">
-                <li>
-                  <a href="#" class="nav__link">Product</a>
+                <li class="nav__dropdown-parent">
+                  <a href="#" class="nav__link nav__link-dropdown">
+                    <span>Product</span>
+                    <svg class="nav__dropdown-icon">
+                      <use
+                        xlink:href="img/sprite.svg#icon-chevron-small-down"
+                      ></use>
+                    </svg>
+                  </a>
+                  <div class="nav__dropdown-menu">
+                    <div class="dropdown-menu">
+                      <ul class="dropdown-menu__list">
+                        <li>
+                          <a href="#" class="dropdown-menu__link">Features</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link">Channels</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link">Digital HQ</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link"
+                            >Integrations</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link">Security</a>
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link"
+                            >Slack Connect</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#" class="dropdown-menu__link">Customers</a>
+                        </li>
+                      </ul>
+                      <a href="#" class="dropdown-menu__download">
+                        <svg class="dropdown-menu__down-icon">
+                          <use
+                            xlink:href="img/sprite.svg#icon-download-cloud"
+                          ></use>
+                        </svg>
+                        <p class="dropdown-menu__down-text">Download Slack</p>
+                      </a>
+                    </div>
+                  </div>
                 </li>
                 <li>
                   <a href="#" class="nav__link">Solutions</a>
