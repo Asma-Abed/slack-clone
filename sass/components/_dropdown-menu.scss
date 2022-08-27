@@ -6,16 +6,26 @@
   border: 1px solid $color-gray;
   box-shadow: 0 0 2rem rgba($color-black, 0.1);
 
+  &--search {
+    width: 100%;
+    border: none;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: 0 2rem 2rem rgba($color-black, 0.1);
+  }
+
   &__list {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 0.6rem;
-    margin-bottom: 1.8rem;
-
     border-radius: 0;
     overflow: hidden;
+
+    &--gap {
+      gap: 0;
+    }
   }
 
   &__link:link,
@@ -29,6 +39,8 @@
   }
 
   &__download {
+    margin-top: 1.8rem;
+
     text-decoration: none;
     color: $color-black;
     display: flex;

@@ -3,12 +3,15 @@
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-
+  height: 4.4rem;
   &__container {
     display: flex;
     align-items: center;
     gap: 8vw;
     justify-content: space-between;
+    // &--search {
+    //   gap: 2rem;
+    // }
   }
 
   &__logo-nav {

@@ -1,0 +1,57 @@
+.search-bar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 1.2rem;
+  &__input {
+    width: 100%;
+    display: inline-block;
+    border: none;
+    outline: 0;
+    padding: 2.15rem 1.5rem;
+    border-radius: 8px;
+
+    &::placeholder {
+      font-size: 1.5rem;
+    }
+  }
+  &__dropdown-menu {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.3s 0.4s, opacity 0.3s ease 0.4s;
+
+    &--shown {
+      display: block;
+      position: absolute;
+      top: 4.8rem;
+      left: 0rem;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__input:focus {
+    box-shadow: 0 0.4rem 2rem rgba($color-black, 0.1);
+  }
+
+  &__icon {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    top: 1.6rem;
+    right: 1.2rem;
+  }
+
+  &::before {
+    content: '';
+    background-color: $color-gray;
+    width: 97%;
+    height: 2px;
+    position: absolute;
+    top: 4.2rem;
+    right: 1.4rem;
+  }
+}
