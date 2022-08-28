@@ -57,6 +57,8 @@ sectionHeroObserver.observe(sectionHero);
 // ADDING THE SEARCH BAR ON CLICK
 // ///////////////////////////////////
 navSearchIcon.addEventListener('click', () => {
+  sectionHeroObserver.unobserve(sectionHero);
+
   nav.classList.add('nav__sticky');
 
   nav.classList.add('nav__sticky--padding');
@@ -74,6 +76,8 @@ navSearchIcon.addEventListener('click', () => {
 // REMOVING SEARCH BAR ON CLICK
 // //////////////////////////////////
 searchCloseIcon.addEventListener('click', () => {
+  sectionHeroObserver.observe(sectionHero);
+
   navLink.forEach((el) => {
     el.classList.add('nav__link--black');
   });
