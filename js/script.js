@@ -17,8 +17,8 @@ const navCtaBtns = document.querySelector('.nav__cta-btns');
 const searchBtn = document.querySelector('.btn__search');
 const searchCloseIcon = document.querySelector('.search-bar__icon');
 
-console.log(navLink);
-
+// ADDING THE STICKY NAV
+// //////////////////////////
 const stickyNav = (entries) => {
   const [entry] = entries;
   console.log(entry);
@@ -45,25 +45,6 @@ const stickyNav = (entries) => {
     navLogo.src = '../img/logo.png';
     navLogo.className = 'header__logo';
   }
-  // else if (entry.isIntersecting && navSearchIcon.clicked === true) {
-  //   navSearchBar.style.display = 'block';
-  //   navSearchIcon.classList.remove('nav__search-icon--black');
-  //   nav.classList.remove('nav__sticky');
-  //   navLogo.src = '../img/logo.png';
-  //   navLogo.className = 'header__logo';
-  // } else if (entry.isIntersecting && navSearchIcon.clicked === false) {
-  //   navSearchIcon.classList.remove('nav__search-icon--black');
-  //   nav.classList.remove('nav__sticky');
-  //   navLogo.src = '../img/logo.png';
-  //   navLogo.className = 'header__logo';
-  //   navLink.forEach((el) => {
-  //     el.classList.remove('nav__link--black');
-  //   });
-
-  //   btnViolet.classList.remove('btn--border-violet');
-  //   btnWhite.classList.remove('btn--violet');
-  //   navDropIcon.classList.remove('nav__dropdown-icon--black');
-  // }
 };
 
 const sectionHeroObserver = new IntersectionObserver(stickyNav, {
@@ -73,8 +54,11 @@ const sectionHeroObserver = new IntersectionObserver(stickyNav, {
 
 sectionHeroObserver.observe(sectionHero);
 
+// ADDING THE SEARCH BAR ON CLICK
+// ///////////////////////////////////
 navSearchIcon.addEventListener('click', () => {
   nav.classList.add('nav__sticky');
+
   nav.classList.add('nav__sticky--padding');
   headerContainer.style.gap = '2vw';
   navLogo.src = '../img/logo-black.png';
@@ -87,16 +71,20 @@ navSearchIcon.addEventListener('click', () => {
   searchBtn.style.display = 'block';
 });
 
+// REMOVING SEARCH BAR ON CLICK
+// //////////////////////////////////
 searchCloseIcon.addEventListener('click', () => {
-  nav.classList.remove('nav__sticky');
+  navLink.forEach((el) => {
+    el.classList.add('nav__link--black');
+  });
   nav.classList.remove('nav__sticky--padding');
   headerContainer.style.gap = '8vw';
-  navLogo.src = '../img/logo.png';
-  navLogo.className = 'header__logo';
+  btnViolet.classList.add('btn--border-violet');
+  btnWhite.classList.add('btn--violet');
+  navDropIcon.classList.add('nav__dropdown-icon--black');
   navLinks.style.display = 'flex';
   linkHide.classList.remove('nav__link--hide');
   navSearchBar.style.display = 'none';
   navCtaBtns.style.display = 'flex';
-  navSearchIcon.classList.remove('nav__search-icon--black');
   searchBtn.style.display = 'none';
 });
