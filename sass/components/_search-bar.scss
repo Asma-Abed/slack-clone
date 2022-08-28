@@ -21,13 +21,14 @@
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 0.3s 0.4s, opacity 0.3s ease 0.4s;
+    transition: visibility 0.3s, opacity 0.3s ease;
+    top: 4.8rem;
+    left: 0rem;
 
     &--shown {
       display: block;
       position: absolute;
-      top: 4.8rem;
-      left: 0rem;
+
       opacity: 1;
       visibility: visible;
     }
@@ -43,6 +44,7 @@
     height: 1.6rem;
     top: 1.6rem;
     right: 1.2rem;
+    cursor: pointer;
   }
 
   &::before {

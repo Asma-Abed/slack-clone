@@ -16,6 +16,11 @@ const navSearchBar = document.querySelector('.nav__search-bar');
 const navCtaBtns = document.querySelector('.nav__cta-btns');
 const searchBtn = document.querySelector('.btn__search');
 const searchCloseIcon = document.querySelector('.search-bar__icon');
+const searchBarInput = document.querySelector('.search-bar__input');
+const searchBarOptions = document.querySelector('.search-bar__dropdown-menu');
+const main = document.getElementById('main');
+
+console.log(searchBarOptions);
 
 // ADDING THE STICKY NAV
 // //////////////////////////
@@ -91,4 +96,16 @@ searchCloseIcon.addEventListener('click', () => {
   navSearchBar.style.display = 'none';
   navCtaBtns.style.display = 'flex';
   searchBtn.style.display = 'none';
+});
+
+header.addEventListener('click', (e) => {
+  console.log(e.target);
+  if (e.target === searchBarInput)
+    searchBarOptions.classList.add('search-bar__dropdown-menu--shown');
+  if (e.target !== searchBarInput)
+    searchBarOptions.classList.remove('search-bar__dropdown-menu--shown');
+});
+
+main.addEventListener('click', () => {
+  searchBarOptions.classList.remove('search-bar__dropdown-menu--shown');
 });
