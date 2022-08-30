@@ -20,8 +20,6 @@ const searchBarInput = document.querySelector('.search-bar__input');
 const searchBarOptions = document.querySelector('.search-bar__dropdown-menu');
 const main = document.getElementById('main');
 
-console.log(searchBarOptions);
-
 // ADDING THE STICKY NAV
 // //////////////////////////
 const stickyNav = (entries) => {
@@ -99,7 +97,6 @@ searchCloseIcon.addEventListener('click', () => {
 });
 
 header.addEventListener('click', (e) => {
-  console.log(e.target);
   if (e.target === searchBarInput)
     searchBarOptions.classList.add('search-bar__dropdown-menu--shown');
   if (e.target !== searchBarInput)

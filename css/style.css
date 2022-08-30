@@ -366,10 +366,29 @@ body {
   gap: 1.6rem;
   align-items: center;
 }
+.story__vid {
+  position: relative;
+}
 .story__vid video {
   width: 100%;
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
+}
+.story__icon-play {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: #fff;
+  padding: 1.8rem 3rem;
+  background-color: #36c5f0;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+}
+.story__vid:hover .story__icon-play {
+  background-color: #1264a3;
 }
 .story__content {
   padding: 3.2rem 3.2rem 1.2rem 3.2rem;
