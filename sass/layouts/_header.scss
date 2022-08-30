@@ -9,9 +9,10 @@
     align-items: center;
     gap: 8vw;
     justify-content: space-between;
-    // &--search {
-    //   gap: 2rem;
-    // }
+
+    @include respond(laptop) {
+      gap: 0;
+    }
   }
 
   &__logo-nav {

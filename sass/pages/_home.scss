@@ -1,12 +1,21 @@
 .container {
   max-width: 123rem;
   margin: 0 auto;
+
+  @include respond(tab-port) {
+    max-width: 105rem;
+  }
 }
 
 .hero {
   background-color: $color-primary;
   color: $color-white;
   padding: 12rem 0;
+  overflow: hidden;
+
+  @include respond(tab-small) {
+    padding: 12rem 3rem;
+  }
 
   &__content {
     padding: 2.5rem 0;
@@ -30,11 +39,18 @@
   &__btns {
     display: flex;
     gap: 0.8rem;
+
+    @include respond(tab-small) {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.6rem;
+    }
   }
 
   &__vid {
     video {
-      width: 127%;
+      max-width: 70rem;
+      max-height: 40rem;
     }
   }
 }
@@ -58,6 +74,9 @@
     justify-content: space-around;
     align-items: center;
     padding: 0 16rem;
+    @include respond(tab-port) {
+      padding: 0;
+    }
   }
 
   &__logo {
@@ -73,10 +92,10 @@
   &__vid {
     video {
       width: 100%;
+      max-height: 40rem;
     }
   }
 }
-
 .statistics {
   padding: 9.8rem 0 4.8rem 0;
   &__heading {
@@ -127,6 +146,10 @@
   margin: 0 auto;
   padding: 8rem 0 1.6rem 0;
 
+  @include respond(tab-small) {
+    padding: 1.5rem 3.5rem 1.6rem 0;
+  }
+
   &__note {
     font-size: 1.4rem;
     margin-top: 6.2rem;
@@ -160,5 +183,12 @@
     display: flex;
     gap: 0.8rem;
     justify-content: center;
+
+    @include respond(tab-small) {
+      flex-direction: column;
+      width: 68%;
+      margin: 0 auto;
+      gap: 1.6rem;
+    }
   }
 }

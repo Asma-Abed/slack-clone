@@ -8,6 +8,16 @@
   box-shadow: 0 0 2rem 0 rgba($color-black, 0.1);
   transition: all 0.3s;
 
+  &--justify {
+    @include respond(tab-small) {
+      justify-self: end;
+    }
+  }
+
+  @include respond(tab-small) {
+    max-width: 28rem;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
@@ -15,9 +25,16 @@
   &--head {
     background-color: $color-primary-dark;
     color: $color-white;
+
+    @include respond(tab-small) {
+      justify-self: end;
+    }
   }
   &__img-box {
     margin-bottom: 2rem;
+    img {
+      width: 100%;
+    }
   }
 
   &__subheading {

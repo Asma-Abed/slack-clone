@@ -122,6 +122,12 @@
   &__cta-btns {
     display: flex;
     gap: 2rem;
+
+    @include respond(tab-port) {
+      #btn-violet {
+        display: none;
+      }
+    }
   }
 
   &__search-bar {

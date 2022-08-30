@@ -1,0 +1,32 @@
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-small) {
+    //1022px
+    @media only screen and (max-width: 63.875em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-port) {
+    //1120px
+    @media only screen and (max-width: 70em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-land) {
+    //1200px
+    @media only screen and (max-width: 76.875em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == laptop) {
+    //1300px
+    @media only screen and (max-width: 81em) {
+      @content;
+    }
+  }
+}

@@ -6,10 +6,18 @@
   margin-top: 1.6rem;
 }
 
-.padding-left {
-  padding-left: 7.2rem !important;
+.margbtm-z-pattern {
+  margin-bottom: 10rem;
+
+  @include respond(tab-small) {
+    margin-bottom: 2rem;
+  }
 }
 
-.padding-right {
-  padding-right: 7.2rem !important;
-}
+// .padding-left {
+//   padding-left: 3.2rem !important;
+// }
+
+// .padding-right {
+//   padding-right: 3.2rem !important;
+// }

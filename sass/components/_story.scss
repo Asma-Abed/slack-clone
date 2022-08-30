@@ -4,9 +4,9 @@
   gap: 1.6rem;
   align-items: center;
 
-  // &__link {
-  //   position: relative;
-  // }
+  @include respond(tab-small) {
+    grid-template-columns: 100%;
+  }
 
   &__vid {
     video {
