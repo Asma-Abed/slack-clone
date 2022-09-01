@@ -7,7 +7,7 @@
   &__container {
     display: flex;
     align-items: center;
-    gap: 8vw;
+    gap: 4vw;
     justify-content: space-between;
 
     @include respond(laptop) {
@@ -32,5 +32,9 @@
   &__logo-sticky {
     height: 4.8rem;
     width: auto;
+
+    @include respond(tab-small) {
+      margin-left: 4rem;
+    }
   }
 }

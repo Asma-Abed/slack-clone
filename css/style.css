@@ -31,6 +31,11 @@ html {
     font-size: 56.25%;
   }
 }
+@media only screen and (max-width: 63.875em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: inherit;
@@ -230,6 +235,16 @@ body {
 }
 .btn__search {
   display: none;
+}
+@media only screen and (max-width: 70em) {
+  .btn--nav-1 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 63.875em) {
+  .btn--nav-2 {
+    display: none;
+  }
 }
 
 .dropdown-menu {
@@ -641,7 +656,7 @@ body {
 .header__container {
   display: flex;
   align-items: center;
-  gap: 8vw;
+  gap: 4vw;
   justify-content: space-between;
 }
 @media only screen and (max-width: 81em) {
@@ -665,10 +680,18 @@ body {
   height: 4.8rem;
   width: auto;
 }
+@media only screen and (max-width: 63.875em) {
+  .header__logo-sticky {
+    margin-left: 4rem;
+  }
+}
 
 .nav {
   display: block;
   width: 90vw;
+}
+.nav__container {
+  max-width: 123rem;
 }
 .nav__sticky {
   position: fixed;
@@ -680,12 +703,24 @@ body {
   top: 1rem;
   animation: slideDown 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+@media only screen and (max-width: 63.875em) {
+  .nav__sticky {
+    border-radius: 0;
+    top: 0;
+    width: 100%;
+  }
+}
 .nav__sticky--padding {
   padding: 1.4rem 3.6rem;
 }
 .nav__links {
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 63.875em) {
+  .nav__links {
+    display: none;
+  }
 }
 .nav__nav-bar {
   list-style: none;
@@ -712,6 +747,11 @@ body {
 }
 .nav__link--hide {
   display: none;
+}
+@media only screen and (max-width: 63.875em) {
+  .nav__link-hide {
+    display: none;
+  }
 }
 .nav__dropdown-menu {
   position: absolute;
@@ -761,6 +801,11 @@ body {
 .nav__search-icon--black {
   fill: #000;
 }
+@media only screen and (max-width: 63.875em) {
+  .nav__sticky .nav__btns {
+    margin-right: 4rem;
+  }
+}
 .nav__btns {
   display: flex;
   align-items: center;
@@ -770,14 +815,25 @@ body {
   display: flex;
   gap: 2rem;
 }
-@media only screen and (max-width: 70em) {
-  .nav__cta-btns #btn-violet {
+@media only screen and (max-width: 63.875em) {
+  .nav__cta-btns {
     display: none;
   }
 }
 .nav__search-bar {
   display: none;
   width: 100%;
+}
+.nav__menu-icon {
+  display: none;
+}
+@media only screen and (max-width: 70em) {
+  .nav__menu-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    fill: #fff;
+  }
 }
 
 .container {

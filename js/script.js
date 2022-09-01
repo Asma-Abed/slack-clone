@@ -10,6 +10,7 @@ const navLinks = document.querySelector('.nav__links');
 const navLink = document.querySelectorAll('.nav__link');
 const linkHide = document.getElementById('hide-link');
 const navSearchIcon = document.querySelector('.nav__search-icon');
+const navMenuIcon = document.querySelector('.nav__menu-icon');
 const navDropIcon = document.querySelector('.nav__dropdown-icon');
 const btnViolet = document.getElementById('btn-violet');
 const btnWhite = document.getElementById('btn-white');
@@ -34,6 +35,7 @@ const stickyNav = (entries) => {
       el.classList.add('nav__link--black');
     });
     navSearchIcon.classList.add('nav__search-icon--black');
+    navMenuIcon.style.fill = '#000';
     btnViolet.classList.add('btn--border-violet');
     btnWhite.classList.add('btn--violet');
     navDropIcon.classList.add('nav__dropdown-icon--black');
@@ -45,6 +47,7 @@ const stickyNav = (entries) => {
     btnWhite.classList.remove('btn--violet');
     navDropIcon.classList.remove('nav__dropdown-icon--black');
     navSearchIcon.classList.remove('nav__search-icon--black');
+    navMenuIcon.style.fill = '#fff';
     nav.classList.remove('nav__sticky');
     navLogo.src = '../img/logo.png';
     navLogo.className = 'header__logo';
