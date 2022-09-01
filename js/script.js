@@ -1,6 +1,7 @@
 'use strict';
 
 const sectionHero = document.querySelector('.hero');
+const sectionFeatured = document.querySelector('.featured');
 const header = document.querySelector('.header');
 const headerContainer = document.querySelector('.header__container');
 const nav = document.getElementById('nav');
@@ -52,7 +53,8 @@ const stickyNav = (entries) => {
 
 const sectionHeroObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0.7,
+  threshold: 0.2,
+  // rootMargin: '-100px',
 });
 
 sectionHeroObserver.observe(sectionHero);
