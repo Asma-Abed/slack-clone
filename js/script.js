@@ -42,6 +42,9 @@ const stickyNav = (entries) => {
     btnViolet.classList.add('btn--border-violet');
     btnWhite.classList.add('btn--violet');
     navDropIcon.classList.add('nav__dropdown-icon--black');
+    document
+      .querySelector('.nav__menu-icon')
+      .classList.remove('nav__menu-icon-display');
   } else {
     navLink.forEach((el) => {
       el.classList.remove('nav__link--black');
@@ -54,6 +57,9 @@ const stickyNav = (entries) => {
     nav.classList.remove('nav__sticky');
     navLogo.src = '../img/logo.png';
     navLogo.className = 'header__logo';
+    document
+      .querySelector('.nav__menu-icon')
+      .classList.remove('nav__menu-icon-display');
   }
 };
 
@@ -76,12 +82,17 @@ navSearchIcon.addEventListener('click', () => {
   headerContainer.style.gap = '2vw';
   navLogo.src = '../img/logo-black.png';
   navLogo.className = 'header__logo-sticky';
-  navLinks.style.display = 'none';
+  navLinks.classList.add('nav__links-display');
   linkHide.classList.add('nav__link--hide');
   navSearchBar.style.display = 'block';
-  navCtaBtns.style.display = 'none';
+  // navCtaBtns.style.display = 'none';
+  navCtaBtns.classList.add('nav__cta-btn-display');
   navSearchIcon.classList.add('nav__search-icon--black');
   searchBtn.style.display = 'block';
+  document
+    .querySelector('.nav__menu-icon')
+    .classList.add('nav__menu-icon-display');
+  // document.querySelector('.nav__btns').style.marginRight = '0';
 });
 
 // REMOVING SEARCH BAR ON CLICK
@@ -93,15 +104,18 @@ searchCloseIcon.addEventListener('click', () => {
     el.classList.add('nav__link--black');
   });
   nav.classList.remove('nav__sticky--padding');
-  headerContainer.style.gap = '8vw';
   btnViolet.classList.add('btn--border-violet');
   btnWhite.classList.add('btn--violet');
   navDropIcon.classList.add('nav__dropdown-icon--black');
-  navLinks.style.display = 'flex';
+  navLinks.classList.remove('nav__links-display');
   linkHide.classList.remove('nav__link--hide');
   navSearchBar.style.display = 'none';
-  navCtaBtns.style.display = 'flex';
+  // navCtaBtns.style.display = 'flex';
+  navCtaBtns.classList.remove('nav__cta-btn-display');
   searchBtn.style.display = 'none';
+  document
+    .querySelector('.nav__menu-icon')
+    .classList.remove('nav__menu-icon-display');
 });
 
 header.addEventListener('click', (e) => {

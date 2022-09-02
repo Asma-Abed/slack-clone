@@ -11,6 +11,10 @@
     }
   }
 
+  @include respond(smaller-phone) {
+    padding: 3rem 1.2rem;
+  }
+
   &__text {
     font-size: 1.8rem;
     color: $color-black;

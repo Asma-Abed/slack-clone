@@ -102,6 +102,9 @@
   }
   &__search {
     display: none;
+    @include respond(tab-small) {
+      display: none !important;
+    }
   }
 
   &--nav-1 {

@@ -102,12 +102,9 @@
                 <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
               </svg>
             </div>
-            <div>
-              <svg class="nav__menu-icon">
-                <use xlink:href="img/sprite.svg#icon-menu"></use>
-              </svg>
-            </div>
-
+            <svg class="nav__menu-icon">
+              <use xlink:href="img/sprite.svg#icon-menu"></use>
+            </svg>
             <a id="hide-link" href="#" class="nav__link nav__link-hide"
               >Sign in</a
             >
@@ -130,10 +127,16 @@
             <div class="search-bar">
               <!-- <label class="search-bar__label" for="search-bar"></label> -->
               <input
-                class="search-bar__input"
+                class="search-bar__input search-bar__desktop"
                 type="text"
                 id="search-bar"
                 placeholder="Find anything (ie. channels, emoji, or reset password)"
+              />
+              <input
+                class="search-bar__input search-bar__mobile"
+                type="text"
+                id="search-bar"
+                placeholder="Search..."
               />
               <svg class="search-bar__icon">
                 <use xlink:href="img/sprite.svg#icon-close"></use>

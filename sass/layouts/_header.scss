@@ -11,7 +11,7 @@
     justify-content: space-between;
 
     @include respond(laptop) {
-      gap: 0;
+      gap: 2vw;
     }
   }
 

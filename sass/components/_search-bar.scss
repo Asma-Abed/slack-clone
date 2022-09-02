@@ -4,6 +4,11 @@
   display: flex;
   align-items: center;
   margin: 0 1.2rem;
+
+  @include respond(tab-small) {
+    width: 95%;
+  }
+
   &__input {
     width: 100%;
     display: inline-block;
@@ -55,5 +60,17 @@
     position: absolute;
     top: 4.2rem;
     right: 1.4rem;
+  }
+
+  &__desktop {
+    @include respond(tab-small) {
+      display: none;
+    }
+  }
+  &__mobile {
+    display: none;
+    @include respond(tab-small) {
+      display: inline-block;
+    }
   }
 }
