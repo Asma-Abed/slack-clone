@@ -59,6 +59,9 @@
     video {
       max-width: 70rem;
       max-height: 40rem;
+      @include respond(smaller-phone) {
+        max-width: 45rem;
+      }
     }
   }
 }
