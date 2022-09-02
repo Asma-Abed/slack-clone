@@ -33,7 +33,7 @@ const stickyNav = (entries) => {
   if (!entry.isIntersecting) {
     nav.classList.add('nav__sticky');
     navLogo.src = '../img/logo-black.png';
-    navLogo.className = 'header__logo-sticky';
+    navLogo.className = 'header__logo-sticky y';
     navLink.forEach((el) => {
       el.classList.add('nav__link--black');
     });
@@ -56,7 +56,7 @@ const stickyNav = (entries) => {
     navMenuIcon.style.fill = '#fff';
     nav.classList.remove('nav__sticky');
     navLogo.src = '../img/logo.png';
-    navLogo.className = 'header__logo';
+    navLogo.className = 'header__logo ';
     document
       .querySelector('.nav__menu-icon')
       .classList.remove('nav__menu-icon-display');
@@ -81,7 +81,7 @@ navSearchIcon.addEventListener('click', () => {
   nav.classList.add('nav__sticky--padding');
   headerContainer.style.gap = '2vw';
   navLogo.src = '../img/logo-black.png';
-  navLogo.className = 'header__logo-sticky';
+  navLogo.className = 'header__logo-sticky header__logo-display';
   navLinks.classList.add('nav__links-display');
   linkHide.classList.add('nav__link--hide');
   navSearchBar.style.display = 'block';
@@ -104,6 +104,7 @@ searchCloseIcon.addEventListener('click', () => {
     el.classList.add('nav__link--black');
   });
   nav.classList.remove('nav__sticky--padding');
+  navLogo.className = 'header__logo-sticky';
   btnViolet.classList.add('btn--border-violet');
   btnWhite.classList.add('btn--violet');
   navDropIcon.classList.add('nav__dropdown-icon--black');

@@ -37,4 +37,10 @@
       margin-left: 4rem;
     }
   }
+
+  &__logo-display {
+    @include respond(tab-small) {
+      display: none;
+    }
+  }
 }

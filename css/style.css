@@ -816,6 +816,11 @@ body {
     margin-left: 4rem;
   }
 }
+@media only screen and (max-width: 63.875em) {
+  .header__logo-display {
+    display: none;
+  }
+}
 
 .nav {
   display: block;
@@ -968,7 +973,7 @@ body {
   }
 }
 .nav__sticky .nav__menu-icon {
-  margin-right: 4rem;
+  margin-right: 4vw;
 }
 .nav__menu-icon-display {
   display: none;
