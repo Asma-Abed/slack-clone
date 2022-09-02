@@ -15,9 +15,9 @@ html {
     font-size: 56.25%;
   }
 
-  @include respond(tab-small) {
-    font-size: 50%;
-  }
+  // @include respond(tab-small) {
+  //   font-size: 50%;
+  // }
 }
 
 body {

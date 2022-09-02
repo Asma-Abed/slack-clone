@@ -17,8 +17,16 @@
     padding: 12rem 3rem;
   }
 
+  @include respond(phone) {
+    padding: 5rem 3rem;
+  }
+
   &__content {
     padding: 2.5rem 0;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -117,12 +125,27 @@
     display: flex;
     gap: 0.8rem;
     justify-content: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
+      margin: 0 3rem;
+      gap: 1.8rem;
+    }
   }
 
   &__numbers {
     display: flex;
     justify-content: space-around;
     list-style: none;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      margin-top: 8rem;
+      text-align: center;
+    }
   }
   &__box {
     max-width: 18rem;
@@ -147,7 +170,7 @@
   padding: 8rem 0 1.6rem 0;
 
   @include respond(tab-small) {
-    padding: 1.5rem 3.5rem 1.6rem 0;
+    padding: 1.6rem 0;
   }
 
   &__note {
@@ -165,6 +188,10 @@
     font-size: 3.2rem;
     text-align: center;
     margin-bottom: 3.2rem;
+
+    @include respond(phone) {
+      font-size: 2.8rem;
+    }
   }
 }
 

@@ -21,6 +21,9 @@ const searchCloseIcon = document.querySelector('.search-bar__icon');
 const searchBarInput = document.querySelector('.search-bar__input');
 const searchBarOptions = document.querySelector('.search-bar__dropdown-menu');
 const main = document.getElementById('main');
+const footerLink = document.querySelectorAll('.footer__list-heading');
+const footerIconMobile = document.querySelectorAll('.footer__icon-right');
+const footerList = document.querySelector('.footer__list');
 
 // ADDING THE STICKY NAV
 // //////////////////////////
@@ -110,4 +113,29 @@ header.addEventListener('click', (e) => {
 
 main.addEventListener('click', () => {
   searchBarOptions.classList.remove('search-bar__dropdown-menu--shown');
+});
+
+footerList.addEventListener('click', (e) => {
+  console.log(e.target);
+  // console.log(e.target.parentElement.parentElement);
+  if (e.target.classList.contains('footer__list-heading')) {
+    e.target
+      .querySelector('.footer__icon-right')
+
+      .classList.toggle('footer__rotate');
+
+    console.log(e.target.nextElementSibling);
+    e.target.nextElementSibling.classList.toggle('footer__mobile-list-links');
+  }
+  if (e.target.classList.contains('use')) {
+    const parent = e.target.parentElement;
+    const secParent = parent.parentElement;
+    parent.classList.toggle('footer__rotate');
+    secParent.nextElementSibling.classList.toggle('footer__mobile-list-links');
+  }
+  if (e.target.classList.contains('footer__icon-right')) {
+    const parent = e.target.parentElement;
+    e.target.classList.toggle('footer__rotate');
+    parent.nextElementSibling.classList.toggle('footer__mobile-list-links');
+  }
 });

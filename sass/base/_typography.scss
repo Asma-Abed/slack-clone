@@ -7,4 +7,8 @@
   @include respond(tab-small) {
     margin-bottom: 3rem;
   }
+
+  @include respond(phone) {
+    font-size: 3.6rem;
+  }
 }
