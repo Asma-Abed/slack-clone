@@ -387,6 +387,7 @@ body {
   display: flex;
   align-items: center;
   margin: 0 1.2rem;
+  overflow: hidden;
 }
 @media only screen and (max-width: 63.875em) {
   .search-bar {
@@ -400,6 +401,12 @@ body {
   outline: 0;
   padding: 2.15rem 1.5rem;
   border-radius: 8px;
+  overflow: hidden;
+}
+@media only screen and (max-width: 32.5em) {
+  .search-bar__input {
+    padding: 2.15rem 0.5rem;
+  }
 }
 .search-bar__input::placeholder {
   font-size: 1.5rem;
