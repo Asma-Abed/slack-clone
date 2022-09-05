@@ -136,12 +136,6 @@
     }
   }
 
-  // &__sticky &__btns {
-  //   @include respond(tab-small) {
-  //     margin-right: 4rem;
-  //   }
-  // }
-
   &__btns {
     display: flex;
     align-items: center;
@@ -172,6 +166,7 @@
       width: 2rem;
       height: 2rem;
       fill: $color-white;
+      cursor: pointer;
     }
   }
 

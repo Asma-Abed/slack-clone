@@ -568,6 +568,7 @@ body {
   margin-bottom: 2.4rem;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .footer__list-links {
   list-style: none;
@@ -869,6 +870,7 @@ body {
 .mobile-nav__close-icon {
   width: 1.8rem;
   height: 1.8rem;
+  cursor: pointer;
 }
 .mobile-nav__links {
   padding: 0 3rem 1.5rem 3rem;
@@ -1111,6 +1113,7 @@ body {
     width: 2rem;
     height: 2rem;
     fill: #fff;
+    cursor: pointer;
   }
 }
 .nav__sticky .nav__menu-icon {
