@@ -18,12 +18,17 @@ const navSearchBar = document.querySelector('.nav__search-bar');
 const navCtaBtns = document.querySelector('.nav__cta-btns');
 const searchBtn = document.querySelector('.btn__search');
 const searchCloseIcon = document.querySelector('.search-bar__icon');
-const searchBarInput = document.querySelector('.search-bar__input');
+const searchBarInput = document.querySelectorAll('.search-bar__input');
 const searchBarOptions = document.querySelector('.search-bar__dropdown-menu');
 const main = document.getElementById('main');
 const footerLink = document.querySelectorAll('.footer__list-heading');
 const footerIconMobile = document.querySelectorAll('.footer__icon-right');
 const footerList = document.querySelector('.footer__list');
+const inputDesktop = document.getElementById('input-desktop');
+const inputMobile = document.getElementById('input-mobile');
+const navMobileIcon = document.querySelector('.nav__menu-icon');
+const navMobile = document.querySelector('.mobile-nav');
+const navMobileClose = document.querySelector('.mobile-nav__close-icon');
 
 // ADDING THE STICKY NAV
 // //////////////////////////
@@ -120,10 +125,11 @@ searchCloseIcon.addEventListener('click', () => {
 });
 
 header.addEventListener('click', (e) => {
-  if (e.target === searchBarInput)
+  if (e.target === inputDesktop || e.target === inputMobile) {
     searchBarOptions.classList.add('search-bar__dropdown-menu--shown');
-  if (e.target !== searchBarInput)
+  } else {
     searchBarOptions.classList.remove('search-bar__dropdown-menu--shown');
+  }
 });
 
 main.addEventListener('click', () => {
@@ -153,4 +159,12 @@ footerList.addEventListener('click', (e) => {
     e.target.classList.toggle('footer__rotate');
     parent.nextElementSibling.classList.toggle('footer__mobile-list-links');
   }
+});
+
+navMobileIcon.addEventListener('click', () => {
+  navMobile.style.transform = 'translateX(0)';
+});
+
+navMobileClose.addEventListener('click', () => {
+  navMobile.style.transform = 'translateX(100%)';
 });

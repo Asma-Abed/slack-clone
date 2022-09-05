@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   margin: 0 1.2rem;
-  overflow: hidden;
 
   @include respond(tab-small) {
     width: 95%;
@@ -17,7 +16,7 @@
     outline: 0;
     padding: 2.15rem 1.5rem;
     border-radius: 8px;
-    overflow: hidden;
+
     @include respond(smaller-phone) {
       padding: 2.15rem 0.5rem;
     }
@@ -34,6 +33,7 @@
     transition: visibility 0.3s, opacity 0.3s ease;
     top: 4.8rem;
     left: 0rem;
+    z-index: 10;
 
     &--shown {
       display: block;
