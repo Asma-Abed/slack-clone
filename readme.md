@@ -1,3 +1,1 @@
-Slack website clone using sass, css, javascript.
-
-In progress...
+Responsive Slack website clone using html, sass, css, javascript.
