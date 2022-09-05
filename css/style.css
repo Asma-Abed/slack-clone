@@ -834,7 +834,6 @@ body {
 
 .mobile-nav {
   display: none;
-  position: relative;
 }
 @media only screen and (max-width: 63.875em) {
   .mobile-nav {
@@ -865,16 +864,19 @@ body {
   width: 1.8rem;
   height: 1.8rem;
 }
-.mobile-nav__links-container {
-  padding: 0 3rem;
-  overflow-y: scroll;
+.mobile-nav__links {
+  padding: 0 3rem 1.5rem 3rem;
+  overflow: auto;
+  height: 28vh;
   padding-bottom: 30vh;
 }
 .mobile-nav__nav-bar {
+  outline: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 3.8rem;
+  margin: 0;
 }
 .mobile-nav__link:link, .mobile-nav__link:visited {
   color: #000;
@@ -903,12 +905,11 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 3rem;
   align-items: flex-start;
-  margin-left: 3rem;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
+  padding-left: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
   font-weight: 700;
 }
 .mobile-nav__dropdown-link:link, .mobile-nav__dropdown-link:visited {
