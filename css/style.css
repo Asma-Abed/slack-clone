@@ -897,8 +897,12 @@ body {
 .mobile-nav__dropdown-icon {
   height: 3rem;
   width: 3rem;
+  transition: all 0.3s;
 }
 .mobile-nav__dropdown-menu {
+  transition: all 0.2s;
+}
+.mobile-nav__dropdown-menu--shown {
   display: none;
 }
 .mobile-nav__dropdown-list {
@@ -944,6 +948,9 @@ body {
   .mobile-nav__btns {
     grid-template-columns: 1fr;
   }
+}
+.mobile-nav__rotate {
+  transform: rotate(90deg);
 }
 
 .nav {

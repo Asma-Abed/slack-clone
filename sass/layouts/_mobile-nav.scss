@@ -71,10 +71,14 @@
   &__dropdown-icon {
     height: 3rem;
     width: 3rem;
+    transition: all 0.3s;
   }
 
   &__dropdown-menu {
-    display: none;
+    transition: all 0.2s;
+    &--shown {
+      display: none;
+    }
   }
 
   &__dropdown-list {
@@ -124,5 +128,9 @@
     @include respond(smaller-phone) {
       grid-template-columns: 1fr;
     }
+  }
+
+  &__rotate {
+    transform: rotate(90deg);
   }
 }

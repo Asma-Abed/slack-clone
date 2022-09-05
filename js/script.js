@@ -29,6 +29,13 @@ const inputMobile = document.getElementById('input-mobile');
 const navMobileIcon = document.querySelector('.nav__menu-icon');
 const navMobile = document.querySelector('.mobile-nav');
 const navMobileClose = document.querySelector('.mobile-nav__close-icon');
+const navMobileDropdownIcon = document.querySelector(
+  '.mobile-nav__dropdown-icon'
+);
+const navMobileDropdown = document.querySelector('.mobile-nav__dropdown-menu');
+const navMobileDropdownClick = document.querySelector(
+  '.mobile-nav__dropdown-parent'
+);
 
 // ADDING THE STICKY NAV
 // //////////////////////////
@@ -167,4 +174,16 @@ navMobileIcon.addEventListener('click', () => {
 
 navMobileClose.addEventListener('click', () => {
   navMobile.style.transform = 'translateX(100%)';
+});
+
+navMobileDropdownClick.addEventListener('click', (e) => {
+  console.log(e.target);
+  if (
+    e.target.classList.contains('mobile-nav__link-dropdown') ||
+    e.target.classList.contains('mobile-nav__dropdown-icon') ||
+    e.target.classList.contains('mobile-use')
+  ) {
+    navMobileDropdown.classList.toggle('mobile-nav__dropdown-menu--shown');
+    navMobileDropdownIcon.classList.toggle('mobile-nav__rotate');
+  }
 });
