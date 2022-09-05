@@ -173,7 +173,7 @@ navMobileIcon.addEventListener('click', () => {
 });
 
 navMobileClose.addEventListener('click', () => {
-  navMobile.style.transform = 'translateX(100%)';
+  navMobile.style.transform = 'translateX(120%)';
 });
 
 navMobileDropdownClick.addEventListener('click', (e) => {

@@ -3,7 +3,7 @@
 
   @include respond(tab-small) {
     display: block;
-    transform: translateX(100%);
+    transform: translateX(120%);
     transition: all 0.3s;
     position: fixed;
     background-color: $color-white;
@@ -57,15 +57,21 @@
     padding-bottom: 0.1rem;
     transition: all 0.2s;
   }
+
   &__link:hover,
   &__link:active {
-    border-bottom: 1px solid $color-white;
+    border-bottom: 1px solid $color-black;
   }
 
   &__link-dropdown {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__link-dropdown:hover,
+  &__link-dropdown:active {
+    border-bottom: none;
   }
 
   &__dropdown-icon {
